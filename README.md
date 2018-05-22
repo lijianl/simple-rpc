@@ -55,3 +55,11 @@ An RPC framework based on Netty, ZooKeeper and Spring
 		IAsyncObjectProxy client = rpcClient.createAsync(HelloService.class);
 		RPCFuture helloFuture = client.call("hello", "World");
    		String result = (String) helloFuture.get(3000, TimeUnit.MILLISECONDS);
+
+
+## 测试代码-学习
+
+## 本地测试
++ git remote -v # 查看remote地址
++ git remote rm origin  # 删除
++ git remote add origin local.git # 增加地址
