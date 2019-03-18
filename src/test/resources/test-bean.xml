@@ -7,14 +7,6 @@
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:property-placeholder location="classpath:rpc.properties"/>
-
-    <bean id="serviceDiscovery" class="com.len.registry.ServiceDiscovery">
-        <constructor-arg name="registryAddress" value="${registry.address}"/>
-    </bean>
-
-    <bean id="rpcClient" class="com.len.client.RpcClient">
-        <constructor-arg name="serviceDiscovery" ref="serviceDiscovery"/>
-    </bean>
+    <bean id="testInitializingBean" class="com.len.test.common.TestInitializingBean" init-method="initXML"></bean>
 
 </beans>
